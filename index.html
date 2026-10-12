@@ -951,5 +951,7 @@ ul{list-style:none;margin:0;padding:0}
   }
 })();
 </script>
+<!-- Agent City: counts views (not in a frame, not bots, not your own browser once you've opened it with ?ac=me) -->
+<script>(function(){try{if(window.top!==window||navigator.webdriver)return;if(/[?&#]ac=me/.test(location.search+location.hash)){localStorage.setItem('ac-me','1');return}if(localStorage.getItem('ac-me'))return;var u="https://agent-city-pulse.vercel.app/api/v?p=demo-own-legacy-nixbyte-app";setTimeout(function(){if(navigator.sendBeacon)navigator.sendBeacon(u);else fetch(u,{method:'POST',mode:'no-cors',keepalive:true})},1500)}catch(e){}})();</script>
 </body>
 </html>
